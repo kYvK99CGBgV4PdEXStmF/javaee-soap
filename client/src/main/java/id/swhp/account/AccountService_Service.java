@@ -30,7 +30,7 @@ public class AccountService_Service
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8080/server/AccountService?wsdl");
+            url = new URL("http://localhost:7001/server/AccountService?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
