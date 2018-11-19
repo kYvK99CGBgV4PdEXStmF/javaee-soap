@@ -5,6 +5,7 @@ import id.swhp.account.AccountService;
 import id.swhp.account.AccountService_Service;
 import id.swhp.account.Message;
 import id.swhp.javaee.soap.business.account.entity.User;
+import javax.xml.ws.BindingProvider;
 
 /**
  * Validate account using SOAP Web Service
@@ -38,6 +39,10 @@ public class AccountValidation {
     }
 
     private Message validateAccount(Account account) {
+        BindingProvider bindingProvider = (BindingProvider) ISERVICE;       
+        bindingProvider.getRequestContext().put("com.sun.xml.ws.request.timeout", 1000);
+        bindingProvider.getRequestContext().put("javax.xml.ws.client.receiveTimeout.request.timeout", 1000);
+     
         return ISERVICE.inqAccount(account);
     }
 }
