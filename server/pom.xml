@@ -12,6 +12,11 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+             <groupId>org.richfaces</groupId>
+             <artifactId>richfaces</artifactId>
+             <version>4.5.17.Final</version>
+         </dependency>
     </dependencies>
     <build>
         <finalName>server</finalName>
